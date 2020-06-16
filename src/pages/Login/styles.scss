@@ -1,6 +1,7 @@
 .inp-text-rounded{
+    width: 100%;
     border-radius: 10px;
-    padding: 3px 12px;
+    padding: 5px 15px;
     border: none;
     outline: none;
     border: 1px solid white;
@@ -73,4 +74,13 @@ button.fb-btn{
     font-weight: bold;
     display: block;
     margin: 5px auto;
+}
+
+.my-form{
+    max-width: 350px;
+}
+.des{
+    width: 100%;
+    object-fit: cover;
+    min-height: 400px;
 }
