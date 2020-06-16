@@ -1,0 +1,166 @@
+$navpad : 1em;
+$icon-menu-height : 4em;
+
+$logo-color: #52B788;
+$link-color: #52B788;
+$hover-color: #74C69D;
+$icon-active: #74c69d;
+$mobi-nav: #D8F3DC;
+
+.navbar{
+	width: 100%;
+	// border-bottom: 1px solid #a8dadc;
+	padding: 1em;
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	
+	&__logo{
+		z-index: 1;
+		margin: 0;
+		font-weight: bold;
+	
+		font-size: 1.5em;
+		padding: 5px;
+		border: 4px solid $logo-color;
+		border-radius: 10px;
+	}
+
+	&__sub-menu{
+    // flex-grow: 1;
+    background: inherit;
+    // position: relative;
+	}
+
+	&__main-menu{
+		display: none;
+		
+	}
+
+	&__background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: transparent;
+		width: 100%;
+		height: 100vh;
+		z-index: 100;	
+	}
+
+}
+
+//
+
+// .wrap-navbar{
+// 	position: relative;
+// }
+// .background{
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100vh;
+// 	background-color: transparent;
+// }
+
+//
+
+.show{
+	display: flex;
+}
+.unshow{
+	display: none;
+}
+
+.icon-active{
+	background-color: $icon-active;
+	border-radius: 50%;
+}
+
+
+.logo-link{
+	color: $logo-color;
+	font-weight: bold;
+	font-size: 1.25em;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: $logo-color
+	}
+}
+
+//
+
+.nav-link{
+	padding: 0.75em 1.5em;
+	color: $link-color;
+	text-decoration: none;
+}
+.nav-link:hover{
+	background: $link-color;
+	color: white;
+}
+//
+
+.nav--mobi{
+	display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: inherit;
+
+	&__icon{
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+	cursor: pointer;
+	padding: 1em;
+		img{
+			width: 1.5em;
+			height: 1.5em;
+
+		}
+	}
+
+	&__menu{
+		position: absolute;
+		background: inherit;
+		right: 0;
+		top: calc(#{$navpad} + #{$icon-menu-height});
+		z-index: 1;
+	}
+
+
+
+}
+
+//
+
+.nav--pc{
+	display: flex;
+	list-style-type: none;
+	margin-bottom: 0;
+}
+.menu--mobi{
+
+	background-color: $mobi-nav;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin-bottom: 0;
+	
+}
+
+@media screen and (min-width: 576px){
+	.navbar{
+
+		&__sub-menu{
+			display: none;
+		}
+		&__main-menu{
+			display: flex;
+			// flex-grow: 1;
+	    background: inherit;
+		}
+
+	}
+}
