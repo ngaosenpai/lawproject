@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
+Navbar.propTypes = {
+	moreClassName : PropTypes.string
+}
+
+Navbar.defaultProps = {
+	moreClassName : ''
+}
+
 function Navbar(props){
 
 	const [show, setShow] = useState(false)
-
+	let {moreClassName} = props
 	const handleClickIcon = () => {
 		
 		let temp = show ? false : true
@@ -17,7 +26,7 @@ function Navbar(props){
 
 	return (
 
-			<nav className="navbar">
+			<nav className={`navbar ${moreClassName}`}>
 
 				<span className="navbar__logo">
 					<Link to="/" className="logo-link  " >Brand</Link>

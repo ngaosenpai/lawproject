@@ -9,13 +9,14 @@ function Login(){
 
 	function handleLogin(event){
 		event.preventDefault()
+		console.log("login")
 	}
 
 	return(
 		<div>
-			<Navbar className="top-nav" />
+			<Navbar moreClassName="fixed-top"/>
 
-			<div className="container">
+			<div className="container mt-under-navbar">
 				<section className="row">
 					<div className="col-12 col-md-6 my-4 my-md-5">
 						<Form 
@@ -40,7 +41,7 @@ function Login(){
 							</FormGroup>	
 							<FormGroup>
 								<button 
-									conClick={e => this.handleLogin(e)} 
+									onClick={e => handleLogin(e)} 
 									className="cus-button"
 								>Đăng nhập</button>
 							</FormGroup>

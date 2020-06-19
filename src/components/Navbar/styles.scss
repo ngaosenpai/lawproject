@@ -15,6 +15,7 @@ $mobi-nav: #D8F3DC;
 	position: relative;
 	justify-content: space-between;
 	align-items: center;
+	background-color: rgba($color: #fff, $alpha: 0.9);
 	
 	&__logo{
 		z-index: 1;
@@ -130,6 +131,15 @@ $mobi-nav: #D8F3DC;
 
 
 
+}
+
+//
+
+.fixed-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	// z-index: inherit
 }
 
 //
