@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { Form, FormGroup, FormText, CustomInput } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
+import Navbar from '../../components/Navbar/Navbar'
+import Card from '../../components/Card/Card'
+
 import './styles.scss'
 
-import Navbar from '../../components/Navbar/Navbar'
 function Login(){
 
 	function handleLogin(event){
@@ -62,9 +64,46 @@ function Login(){
 						<img src="https://picsum.photos/400/300" alt=""className="des"/>
 					</div>
 				</section>
-
 			</div>
+			<div className="my-bg-color mt-4 mt-md-5 py-5">
 
+				<div className="container">
+					<h4 className="text-center mb-4">
+						Tính năng nổi bật
+					</h4>
+					<section className="row mb-5">
+						<div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+							<Card 
+								cTitle="Kết nối mọi người." 
+								cDetail="Nơi mọi người từ khắp mọi miền kết nối với nhau. Và là môi trường trực tuyến để sinh viên luật va chạm thực tế."
+							/>
+						</div>
+						
+						<div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+							<Card 
+								cTitle="Nhận trợ giúp từ cộng đồng." 
+								cDetail="Mọi thắc mắc của bạn về luật pháp đều được sự trợ giúp từ các sinh viên luật và các chuyên gia đầu ngành về luật pháp."
+							/>
+						</div>
+						<div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+							<Card  
+								cTitle="Tranh luận và bày tỏ ý kiến."
+								cDetail="Đưa ra những ý kiến về vấn đề mà người hỏi gặp phải. Có thể tán thành hoặc phản biện để đạt được sự chính xác nhất."
+							/>
+						</div>
+						<div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center">
+							<Card  
+								cTitle="Xác thực và bảo mật thông tin."
+								cDetail="Người hỏi được bảo mật toàn bộ thông tin, những sinh viên và chuyên gia được xác thực danh tính kĩ càng."
+							/>
+						</div>
+
+					</section>
+				</div>
+			</div>
+			<footer>
+				footer...
+			</footer>
 		</div>
 	)
 }
